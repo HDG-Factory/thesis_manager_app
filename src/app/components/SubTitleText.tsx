@@ -2,10 +2,10 @@
 import { usePathname } from "next/navigation"
 
 export default function SubTitleText(){
-    const pathName = usePathname();
+    const pathName: string = usePathname();
 
     const textFormat = () => {
-        return pathName.replace("/", "").toUpperCase();
+        return pathName.charAt(1).toUpperCase() + pathName.slice(2);;
     }
     
     return(

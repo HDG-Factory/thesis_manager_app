@@ -1,7 +1,7 @@
 import React from "react";
-import {IconSvgProps} from "./types";
+import {IconSvgProps} from "../thesis/components/types";
 
-export const PlusIcon = ({size = 24, width, height, ...props}: IconSvgProps) => (
+export const PlusIcon = ({size = 20, width, height, ...props}: IconSvgProps) => (
   <svg
     aria-hidden="true"
     fill="none"

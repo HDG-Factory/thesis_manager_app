@@ -20,12 +20,14 @@ import {
   ChipProps,
   SortDescriptor
 } from "@nextui-org/react";
-import {PlusIcon} from "./PlusIcon";
+import {PlusIcon} from "../../components/PlusIcon";
+import {UserIcon} from '../../components/UserIcon';
 import {VerticalDotsIcon} from "./VerticalDotsIcon";
 import {ChevronDownIcon} from "./ChevronDownIcon";
 import {SearchIcon} from "./SearchIcon";
 import {columns, users, statusOptions} from "./data";
 import {capitalize} from "./utils";
+import { type } from "os";
 
 const statusColorMap: Record<string, ChipProps["color"]> = {
   activo: "success",
@@ -33,7 +35,7 @@ const statusColorMap: Record<string, ChipProps["color"]> = {
   pendiente: "warning",
 };
 
-const INITIAL_VISIBLE_COLUMNS = ["name", "asesor", "cargo", "date", "estado", "actions"];
+const INITIAL_VISIBLE_COLUMNS = ["name", "asesores", "jurados", "revisores", "date", "estado", "actions"];
 
 type User = typeof users[0];
 
@@ -97,56 +99,74 @@ export default function ThesisTable() {
   const renderCell = React.useCallback((user: User, columnKey: React.Key) => {
     const cellValue = user[columnKey as keyof User];
 
-    switch (columnKey) {
-      case "name":
-        return (
-          <User
-            avatarProps={{radius: "lg", src: user.avatar}}
-            description={user.email}
-            name={cellValue}
-          >
-            {user.email}
-          </User>
-        );
-      case "asesor":
-        return (
-          <div className="flex flex-col">
-            <p className="text-bold text-small capitalize">{cellValue}</p>
-            <p className="text-bold text-tiny capitalize text-default-400">{user.team}</p>
-          </div>
-        ); 
-      case "cargo":
-        return (
-          <div className="flex flex-col">
-            <p className="text-bold text-small capitalize">{cellValue}</p>
-            <p className="text-bold text-tiny capitalize text-default-400">{user.team}</p>
-          </div>
-        );
-      case "estado":
-        return (
-          <Chip className="capitalize" color={statusColorMap[user.estado]} size="sm" variant="flat">
-            {cellValue}
-          </Chip>
-        );
-      case "actions":
-        return (
-          <div className="relative flex justify-end items-center gap-1">
-            <Dropdown>
-              <DropdownTrigger>
-                <Button isIconOnly size="sm" variant="light">
-                  <VerticalDotsIcon className="text-default-300" />
-                </Button>
-              </DropdownTrigger>
-              <DropdownMenu>
-                <DropdownItem>View</DropdownItem>
-                <DropdownItem>Edit</DropdownItem>
-                <DropdownItem>Delete</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-          </div>
-        );
-      default:
-        return cellValue;
+    if (typeof(cellValue)!='object') {
+      switch (columnKey) {
+        case "name":
+          return (
+            <User
+              avatarProps={{radius: "lg", src: user.avatar}}
+              description={user.email}
+              name={cellValue}
+            >
+              {user.email}
+            </User>
+          );
+        case "asesor":
+          return (
+            <div className="flex flex-col">
+              <p className="text-bold text-small capitalize">{cellValue}</p>
+              <p className="text-bold text-tiny capitalize text-default-400">{user.team}</p>
+            </div>
+          ); 
+        case "cargo":
+          return (
+            <div className="flex flex-col">
+              <p className="text-bold text-small capitalize">{cellValue}</p>
+              <p className="text-bold text-tiny capitalize text-default-400">{user.team}</p>
+            </div>
+          );
+        case "estado":
+          return (
+            <Chip className="capitalize" color={statusColorMap[user.estado]} size="sm" variant="flat">
+              {cellValue}
+            </Chip>
+          );
+        case "actions":
+          return (
+            <div className="relative flex justify-end items-center gap-1">
+              <Dropdown>
+                <DropdownTrigger>
+                  <Button isIconOnly size="sm" variant="light">
+                    <VerticalDotsIcon className="text-default-300" />
+                  </Button>
+                </DropdownTrigger>
+                <DropdownMenu>
+                  <DropdownItem>View</DropdownItem>
+                  <DropdownItem>Edit</DropdownItem>
+                  <DropdownItem>Delete</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+            </div>
+          );
+        default:
+          return cellValue;
+      }
+    } else {
+      return (
+        cellValue.length > 0?
+        <ul>          
+          {cellValue.map(i =>
+            <li className="flex my-4">
+              <UserIcon/>
+              <div className="ml-3">
+                {i.nombre}
+              </div>
+            </li>
+          )}
+        </ul>
+        :
+        <Chip className="text-gray-500" radius="sm">No asignado</Chip>
+      );
     }
   }, []);
 
@@ -246,9 +266,9 @@ export default function ThesisTable() {
           </div>
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-default-400 text-small">Total {users.length} users</span>
+          <span className="text-default-400 text-small">{users.length} usuario(s) total(es)</span>
           <label className="flex items-center text-default-400 text-small">
-            Rows per page:
+            Registros por página:
             <select
               className="bg-transparent outline-none text-default-400 text-small"
               onChange={onRowsPerPageChange}
@@ -277,7 +297,7 @@ export default function ThesisTable() {
         <span className="w-[30%] text-small text-default-400">
           {selectedKeys === "all"
             ? "All items selected"
-            : `${selectedKeys.size} of ${filteredItems.length} selected`}
+            : `${selectedKeys.size} of ${filteredItems.length} seleccionados`}
         </span>
         <Pagination
           isCompact
@@ -290,10 +310,10 @@ export default function ThesisTable() {
         />
         <div className="hidden sm:flex w-[30%] justify-end gap-2">
           <Button isDisabled={pages === 1} size="sm" variant="flat" onPress={onPreviousPage}>
-            Previous
+            Anterior
           </Button>
           <Button isDisabled={pages === 1} size="sm" variant="flat" onPress={onNextPage}>
-            Next
+            Siguiente
           </Button>
         </div>
       </div>
@@ -329,7 +349,7 @@ export default function ThesisTable() {
           </TableColumn>
         )}
       </TableHeader>
-      <TableBody emptyContent={"No users found"} items={sortedItems}>
+      <TableBody emptyContent={"No se encontraron usuarios"} items={sortedItems}>
         {(item) => (
           <TableRow key={item.id}>
             {(columnKey) => <TableCell>{renderCell(item, columnKey)}</TableCell>}

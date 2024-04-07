@@ -1,15 +1,17 @@
 import React from "react";
 const columns = [
   {name: "ID", uid: "id", sortable: true},
-  {name: "NAME", uid: "name", sortable: true},
-  {name: "ASESOR", uid: "asesor", sortable: true},
+  {name: "ESTUDIANTE", uid: "name", sortable: true},
+  {name: "ASESOR(ES)", uid: "asesores", sortable: true},
+  {name: "REVISOR(ES)", uid: "revisores", sortable: true},
+  {name: "JURADO(S)", uid: "jurados", sortable: true},
   {name: "AGE", uid: "age", sortable: true},
   {name: "CARGO", uid: "cargo", sortable: true},
-  {name: "DATE", uid: "date", sortable: true},
+  {name: "FECHA", uid: "date", sortable: true},
   {name: "TEAM", uid: "team"},
   {name: "EMAIL", uid: "email"},
   {name: "ESTADO", uid: "estado", sortable: true},
-  {name: "ACTIONS", uid: "actions"},
+  {name: "ACCIÓN", uid: "actions"},
 ];
 
 const statusOptions = [
@@ -23,6 +25,42 @@ const users = [
     id: 1,
     name: "Tony Reichert",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      },
+      {
+        nombre: 'Juan Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      },
+      {
+        nombre: 'Diego Morales',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      },
+      {
+        nombre: 'Hugo Olivera',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      },
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+    ],
     cargo: "CEO",
     date: "04/04/2024",
     team: "Management",
@@ -35,6 +73,30 @@ const users = [
     id: 2,
     name: "Zoey Lang",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Jorge Sánchez',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'María Rosas',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "Tech Lead",
     date: "04/04/2024",
     team: "Development",
@@ -47,6 +109,30 @@ const users = [
     id: 3,
     name: "Jane Fisher",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Ernesto Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Henriquez',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "Sr. Dev",
     date: "04/04/2024",
     team: "Development",
@@ -59,6 +145,30 @@ const users = [
     id: 4,
     name: "William Howard",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Patrick Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Ronaldo',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "C.M.",
     date: "04/04/2024",
     team: "Marketing",
@@ -71,6 +181,30 @@ const users = [
     id: 5,
     name: "Kristen Copper",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Suarez',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Daniela Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Gabriel Correa',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "S. Manager",
     date: "04/04/2024",
     team: "Sales",
@@ -83,6 +217,30 @@ const users = [
     id: 6,
     name: "Brian Kim",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Vangladesh',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Tomas Rincon',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Javier Chavez',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "P. Manager",
     date: "04/04/2024",
     team: "Management",
@@ -95,6 +253,30 @@ const users = [
     id: 7,
     name: "Michael Hunt",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "Designer",
     date: "04/04/2024",
     team: "Design",
@@ -107,6 +289,30 @@ const users = [
     id: 8,
     name: "Samantha Brooks",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "HR Manager",
     date: "04/04/2024",
     team: "HR",
@@ -119,6 +325,30 @@ const users = [
     id: 9,
     name: "Frank Harrison",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "F. Manager",
     date: "04/04/2024",
     team: "Finance",
@@ -131,6 +361,30 @@ const users = [
     id: 10,
     name: "Emma Adams",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "Ops Manager",
     date: "04/04/2024",
     team: "Operations",
@@ -143,6 +397,30 @@ const users = [
     id: 11,
     name: "Brandon Stevens",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "Jr. Dev",
     date: "04/04/2024",
     team: "Development",
@@ -155,6 +433,30 @@ const users = [
     id: 12,
     name: "Megan Richards",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "P. Manager",
     date: "04/04/2024",
     team: "Product",
@@ -167,6 +469,30 @@ const users = [
     id: 13,
     name: "Oliver Scott",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "S. Manager",
     date: "04/04/2024",
     team: "Security",
@@ -179,6 +505,30 @@ const users = [
     id: 14,
     name: "Grace Allen",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "M. Specialist",
     date: "04/04/2024",
     team: "Marketing",
@@ -191,6 +541,30 @@ const users = [
     id: 15,
     name: "Noah Carter",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "IT Specialist",
     date: "04/04/2024",
     team: "I. Technology",
@@ -203,6 +577,30 @@ const users = [
     id: 16,
     name: "Ava Perez",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "Manager",
     date: "04/04/2024",
     team: "Sales",
@@ -215,6 +613,30 @@ const users = [
     id: 17,
     name: "Liam Johnson",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "Data Analyst",
     date: "04/04/2024",
     team: "Analysis",
@@ -227,6 +649,30 @@ const users = [
     id: 18,
     name: "Sophia Taylor",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "QA Analyst",
     date: "04/04/2024",
     team: "Testing",
@@ -239,6 +685,30 @@ const users = [
     id: 19,
     name: "Lucas Harris",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "Administrator",
     date: "04/04/2024",
     team: "Information Technology",
@@ -251,6 +721,30 @@ const users = [
     id: 20,
     name: "Mia Robinson",
     asesor: "Hugo Javier",
+    asesores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    revisores: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
+    jurados: [
+      {
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+      }
+    ],
     cargo: "Coordinator",
     date: "04/04/2024",
     team: "Operations",
