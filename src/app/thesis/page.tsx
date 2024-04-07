@@ -1,4 +1,4 @@
-export default function Thesis(){
+export default function Thesis() {
     return (
         <>
             <h1>Hola</h1>
