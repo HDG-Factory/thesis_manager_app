@@ -237,7 +237,7 @@ export default function ThesisTable() {
                 ))}
               </DropdownMenu>
             </Dropdown>
-            <Button color="secondary" endContent={<PlusIcon />}>
+            <Button color="primary" variant="ghost" endContent={<PlusIcon />}>
               Nueva Línea de Investigación
             </Button>
             <Button color="primary" endContent={<PlusIcon />}>

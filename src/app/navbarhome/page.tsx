@@ -38,12 +38,12 @@ const items: MenuItem[] = [
   getItem('Option 5', '5', <ContainerOutlined />),
 ];
 
-export default function navbar() {
+export default function NavbarHome() {
   return (
     <div className="bg-[#001529] w-64 h-screen place-content-between" >
       <div className=''>
         <div>
-          <User className='m-5'
+          <User className='m-5 text-white'
             name="Jane Doe"
             description="Product Designer"
             avatarProps={{
