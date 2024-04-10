@@ -65,7 +65,6 @@ export default function StudentForm() {
                     </Button>
                 </div>
             </CardBody>
-            <Divider />
             <CardFooter className="flex  justify-center mb-2 mt-2">
                 <Button color="primary" className="w-full">
                     Crear Registro
