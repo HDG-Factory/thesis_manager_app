@@ -48,48 +48,48 @@ const columns = [
 ];
 
 // Default Data
-const getDropdownAdvisors: PersonData[] = [
+let getDropdownAdvisors: PersonData[] = [
     {
-        id: 5,
+        id: 12,
         nombre: 'Luis Seminario',
         codigo: '65465468FD',
         correo: 'luis.seminario@uncp.edu.pe',
         linea: 'TICS'
     },
     {
-        id: 6,
+        id: 13,
+        nombre: 'George Sanchez',
+        codigo: 'A9774195FD',
+        correo: 'george.sanchez@uncp.edu.pe',
+        linea: 'EDUC'
+    }
+];
+let getDropdownReviewers: PersonData[] = [
+    {
+        id: 14,
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+    },
+    {
+        id: 15,
         nombre: 'Manuel Vallejo',
         codigo: '65465468FD',
         correo: 'luis.seminario@uncp.edu.pe',
         linea: 'TICS'
     }
 ];
-const getDropdownReviewers: PersonData[] = [
+let getDropdownJuries: PersonData[] = [
     {
-        id: 5,
+        id: 16,
         nombre: 'Luis Seminario',
         codigo: '65465468FD',
         correo: 'luis.seminario@uncp.edu.pe',
         linea: 'TICS'
     },
     {
-        id: 6,
-        nombre: 'Manuel Vallejo',
-        codigo: '65465468FD',
-        correo: 'luis.seminario@uncp.edu.pe',
-        linea: 'TICS'
-    }
-];
-const getDropdownJuries: PersonData[] = [
-    {
-        id: 5,
-        nombre: 'Luis Seminario',
-        codigo: '65465468FD',
-        correo: 'luis.seminario@uncp.edu.pe',
-        linea: 'TICS'
-    },
-    {
-        id: 6,
+        id: 17,
         nombre: 'Manuel Vallejo',
         codigo: '65465468FD',
         correo: 'luis.seminario@uncp.edu.pe',
@@ -97,90 +97,90 @@ const getDropdownJuries: PersonData[] = [
     }
 ];
 
-const advisorsDefaultData: PersonData[] = [
+let advisorsDefaultData: PersonData[] = [
     {
         id: 1,
-        nombre: 'Luis Seminario',
-        codigo: '65465468FD',
-        correo: 'luis.seminario@uncp.edu.pe',
-        linea: 'TICS'
+        nombre: 'Alberto Fernandez',
+        codigo: '6BP65971FD',
+        correo: 'alberto.fernandez@uncp.edu.pe',
+        linea: 'EDUC'
     },
     {
         id: 2,
         nombre: 'Manuel Vallejo',
         codigo: '65465468FD',
-        correo: 'luis.seminario@uncp.edu.pe',
+        correo: 'manuel.vallejo@uncp.edu.pe',
         linea: 'TICS'
     },
     {
         id: 3,
         nombre: 'Arturo Navarro',
         codigo: '65465468FD',
+        correo: 'arturo.navarro@uncp.edu.pe',
+        linea: 'EDUC'
+    },
+    {
+        id: 4,
+        nombre: 'Valeria Lopez',
+        codigo: 'PE569876W6',
+        correo: 'vale.lopez@uncp.edu.pe',
+        linea: 'TICS'
+    }
+];
+let reviewersDefaultData: PersonData[] = [
+    {
+        id: 5,
+        nombre: 'Luis Seminario',
+        codigo: '65465468FD',
         correo: 'luis.seminario@uncp.edu.pe',
         linea: 'TICS'
     },
     {
-        id: 4,
+        id: 6,
+        nombre: 'Manuel Vallejo',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'EDUC'
+    },
+    {
+        id: 7,
+        nombre: 'Arturo Navarro',
+        codigo: '65465468FD',
+        correo: 'luis.seminario@uncp.edu.pe',
+        linea: 'TICS'
+    },
+    {
+        id: 8,
         nombre: 'Valeria Lopez',
         codigo: '65465468FD',
         correo: 'luis.seminario@uncp.edu.pe',
         linea: 'TICS'
     }
 ];
-const reviewersDefaultData: PersonData[] = [
+let juriesDefaultData: PersonData[] = [
     {
-        id: 1,
+        id: 9,
         nombre: 'Luis Seminario',
         codigo: '65465468FD',
         correo: 'luis.seminario@uncp.edu.pe',
         linea: 'TICS'
     },
     {
-        id: 2,
+        id: 10,
         nombre: 'Manuel Vallejo',
         codigo: '65465468FD',
         correo: 'luis.seminario@uncp.edu.pe',
         linea: 'TICS'
     },
     {
-        id: 3,
+        id:11,
         nombre: 'Arturo Navarro',
         codigo: '65465468FD',
         correo: 'luis.seminario@uncp.edu.pe',
         linea: 'TICS'
     },
     {
-        id: 4,
-        nombre: 'Valeria Lopez',
-        codigo: '65465468FD',
-        correo: 'luis.seminario@uncp.edu.pe',
-        linea: 'TICS'
-    }
-];
-const juriesDefaultData: PersonData[] = [
-    {
-        id: 1,
-        nombre: 'Luis Seminario',
-        codigo: '65465468FD',
-        correo: 'luis.seminario@uncp.edu.pe',
-        linea: 'TICS'
-    },
-    {
-        id: 2,
-        nombre: 'Manuel Vallejo',
-        codigo: '65465468FD',
-        correo: 'luis.seminario@uncp.edu.pe',
-        linea: 'TICS'
-    },
-    {
-        id: 3,
-        nombre: 'Arturo Navarro',
-        codigo: '65465468FD',
-        correo: 'luis.seminario@uncp.edu.pe',
-        linea: 'TICS'
-    },
-    {
-        id: 4,
+        id: 12,
         nombre: 'Valeria Lopez',
         codigo: '65465468FD',
         correo: 'luis.seminario@uncp.edu.pe',
@@ -189,24 +189,22 @@ const juriesDefaultData: PersonData[] = [
 ]
 //
 
-const InputDropdown = ({dropdownData, setDropdownData, val, set}: DropdownProps) => {
+const InputDropdown = ({dropdownData, add} : {dropdownData: PersonData[], add: any}) => {
 
-    const addItem = (event: React.MouseEvent<HTMLLIElement, MouseEvent>, item: PersonData) =>{
-        let newItems = dropdownData.filter(i => i.id != item.id);
-        setDropdownData(newItems)
+    // const addItem = (event: React.MouseEvent<HTMLLIElement, MouseEvent>, item: PersonData) =>{
+    //     let newItems = dropdownData.filter(i => i.id != item.id);
+    //     setDropdownData(newItems)
 
-        let newList = [...val, item]
-        set(newList)
-    }
+    //     let newList = [...val, item]
+    //     set(newList)
+    // }
 
     const renderDescription = (email: string, line: string) => {return <ul><li>{email}</li><li>{line}</li></ul>}
 
     return (
     <Dropdown>
         <DropdownTrigger>
-            <Button 
-                variant="bordered" 
-            >
+            <Button variant="bordered">
                 Asignar <PlusIcon/>
             </Button>
         </DropdownTrigger>
@@ -217,7 +215,7 @@ const InputDropdown = ({dropdownData, setDropdownData, val, set}: DropdownProps)
             color="default"
             description={renderDescription(item.correo, item.linea)}
             startContent={<UserIcon/>}
-            onClick={(event) => addItem(event, item)}
+            onClick={(event) => add(event, item)}
             textValue={item.nombre}
             >
             {item.nombre} | {item.codigo}
@@ -228,50 +226,64 @@ const InputDropdown = ({dropdownData, setDropdownData, val, set}: DropdownProps)
     );
 }
  
-function AssignmentsTable({items, setItems}: {items: PersonData[], setItems: React.Dispatch<React.SetStateAction<PersonData[]>>}) {
+function AssignmentsTable({dropdownData, setDropdownData, val, set}: DropdownProps) {
 
-    const deleteItems = (_: React.MouseEvent<HTMLLIElement, MouseEvent>, it: PersonData) => {
-        let newItems = items.filter(i => i.id != it.id);
-        setItems(newItems)
+    const addItem = (event: React.MouseEvent<HTMLLIElement, MouseEvent>, item: PersonData) =>{
+        let newItems = dropdownData.filter(i => i.id != item.id);
+        setDropdownData(newItems)
+
+        let newList = [...val, item]
+        set(newList)
+    }
+
+    const deleteItems = (_: React.MouseEvent<HTMLButtonElement, MouseEvent>, it: PersonData) => {
+        let newList = val.filter(i => i.id != it.id);
+        set(newList)
+
+        let newItems = [...dropdownData, it];
+        setDropdownData(newItems)
     }
 
     return (
-      <Table aria-label="AssignmentsTable" className="mt-8">
-        <TableHeader columns={columns}>
-          {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
-        </TableHeader>
-        <TableBody items={items}>
-          {(item: any) => (
-            <TableRow key={item.id}>
-              {(columnKey) =>
-                <TableCell>
-                    {
-                        columnKey === 'actions'?
-                        <Button isIconOnly color="danger" variant="light" aria-label="Delete row" /*onClick={(event)=> deleteItems(event, item)}*/>
-                            <DeleteIcon />
-                        </Button>
-                        :
-                        item[columnKey]
+        <>
+            <InputDropdown dropdownData={dropdownData} add={addItem}/>
+            <Table aria-label="AssignmentsTable" className="mt-8">
+            <TableHeader columns={columns}>
+                {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
+            </TableHeader>            
+            <TableBody items={val}>
+                {(item: any) => (
+                    <TableRow key={item.id}>
+                    {(columnKey) =>
+                        <TableCell>
+                            {
+                                columnKey === 'actions'?
+                                <Button isIconOnly color="danger" variant="light" aria-label="Delete row" onClick={(event)=> deleteItems(event, item)}>
+                                    <DeleteIcon />
+                                </Button>
+                                :
+                                item[columnKey]
+                            }
+                        </TableCell>
                     }
-                </TableCell>
-              }
-            </TableRow>
-          )}
-        </TableBody>
-      </Table>
+                    </TableRow>
+                )}
+            </TableBody>        
+        </Table>
+      </>
     );
   }
 
 export default function AsignacionView(){
     const [tabSelected, setTabSelected] = useState<TabValues>("Asesor");
 
-    const [advisors, setAdvisors] = useState(advisorsDefaultData);
-    const [reviewers, setReviewers] = useState(reviewersDefaultData);
-    const [juries, setJuries] = useState(juriesDefaultData);
+    let [advisors, setAdvisors] = useState(advisorsDefaultData);
+    let [reviewers, setReviewers] = useState(reviewersDefaultData);
+    let [juries, setJuries] = useState(juriesDefaultData);
 
-    const [totalAdvisors, setTotalAdvisors] = useState(getDropdownAdvisors);
-    const [totalReviewers, setTotalReviewers] = useState(getDropdownReviewers);
-    const [totalJuries, setTotalJuries] = useState(getDropdownJuries);
+    let [totalAdvisors, setTotalAdvisors] = useState(getDropdownAdvisors);
+    let [totalReviewers, setTotalReviewers] = useState(getDropdownReviewers);
+    let [totalJuries, setTotalJuries] = useState(getDropdownJuries);
 
     return(
         <>
@@ -279,22 +291,22 @@ export default function AsignacionView(){
                 <Tabs key="underlined" variant="underlined" color="primary" selectedKey={tabSelected} onSelectionChange={key => setTabSelected(key as TabValues)}>
                     <Tab key="Asesor" title="Asesor(es)">
                         <CardBody>
-                            <InputDropdown dropdownData={totalAdvisors} setDropdownData={setTotalAdvisors} val={advisors} set={setAdvisors}/>
-                            <AssignmentsTable items={advisors} setItems={setAdvisors}/>
+                            {/* <InputDropdown dropdownData={totalAdvisors} setDropdownData={setTotalAdvisors} val={advisors} set={setAdvisors}/> */}
+                            <AssignmentsTable dropdownData={totalAdvisors} setDropdownData={setTotalAdvisors} val={advisors} set={setAdvisors}/>
                         </CardBody>
                     </Tab>
-                    <Tab key="Revisor" title="Revisor(es)">
+                    {/* <Tab key="Revisor" title="Revisor(es)">
                         <CardBody>
                             <InputDropdown dropdownData={totalReviewers} setDropdownData={setTotalReviewers} val={reviewers} set={setReviewers}/>
-                            <AssignmentsTable items={reviewers} setItems={setReviewers} />
+                            <AssignmentsTable dropdownData={totalReviewers} setDropdownData={setTotalReviewers} val={reviewers} set={setReviewers} />
                         </CardBody>
                     </Tab>
                     <Tab key="Jurado" title="Jurado(s)">
                         <CardBody>
                             <InputDropdown dropdownData={totalJuries} setDropdownData={setTotalJuries} val={juries} set={setJuries}/>
-                            <AssignmentsTable items={juries} setItems={setJuries} />
+                            <AssignmentsTable dropdownData={totalJuries} setDropdownData={setTotalJuries} val={juries} set={setJuries} />
                         </CardBody>
-                    </Tab>
+                    </Tab> */}
                 </Tabs>
             </Card>
         </>
