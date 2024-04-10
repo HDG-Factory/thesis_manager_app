@@ -37,39 +37,42 @@ export default function StudentForm() {
     };
 
     return (
-        < Card className="max-w-[400px] h-[500px]" >
+        < Card className="max-w-[1000px] w-[600px] h-[600px]" >
+
             <CardHeader className=" flex justify-center mb-3 mt-3">
 
                 <h1 className="text-2xl">Registrar estudiante</h1>
 
             </CardHeader>
-            <Divider />
-            <CardBody className=" bordered flex place-content-evenly " >
-                <div className="flex w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-4">
-                    <Input variant="bordered" type="nombre" label="Nombre" />
+            <CardBody >
+                <div className="flex justify-center  mb-6">
+                    <Input variant="bordered" className="w-3/4" type="nombre" label="Nombre" />
                 </div>
-                <div className="flex w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-4">
-                    <Input variant="bordered" type="dni" label="DNI" />
+                <div className="flex justify-center  mb-6  gap-4">
+                    <Input variant="bordered" className="w-3/4" type="dni" label="DNI" />
                 </div>
-                <div className="flex w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-4">
-                    <Input variant="bordered" type="codigo" label="grado" />
+                <div className="flex justify-center   mb-6  gap-4">
+                    <Input variant="bordered" className="w-3/4" type="codigo" label="grado" />
                 </div>
-                <div className=" text-red-500 flex w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-4">
-                    <Input variant="bordered" type="email" label="Correo institucional" />
+                <div className=" text-red-500 flex justify-center  mb-8 gap-4">
+                    <Input variant="bordered" className="w-3/4" type="email" label="Correo institucional" />
                 </div>
 
-                <div className="flex">
-                    <Input className="flex justify-center" type="file" onChange={handleFileChange} />
-                    <Button color="primary" onClick={handleUpload}>
-                        Subir Archivo
-                    </Button>
+                <div className="flex justify-center">
+                    <div className=" flex justify-center w-4/5 ">
+                        <Input type="file" onChange={handleFileChange} />
+                        <Button className="w-2/5 ml-1" color="primary" onClick={handleUpload}>
+                            Subir Archivo
+                        </Button>
+                    </div>
                 </div>
             </CardBody>
             <CardFooter className="flex  justify-center mb-2 mt-2">
-                <Button color="primary" className="w-full">
+                <Button color="primary" className="w-5/6">
                     Crear Registro
                 </Button>
             </CardFooter>
+
         </Card >
     );
 }
